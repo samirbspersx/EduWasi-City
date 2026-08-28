@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="EduWasi City - Aprende finanzas personales jugando. Un juego interactivo de educación financiera para jóvenes.">
+  <title>🎮 EduWasi City - Pequeños ahorros, grandes metas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== START SCREEN ========== -->
+  <div id="start-screen">
+    <div class="logo-container">
+      <span class="logo-emoji">🏙️</span>
+    </div>
+    <h1>EduWasi City</h1>
+    <p class="subtitle">Gamificación de Finanzas Personales</p>
+    <p class="tagline">🎯 Pequeños ahorros, grandes metas</p>
+    <button class="start-btn" id="btn-start">▶ JUGAR</button>
+  </div>
+
+  <!-- ========== STATS BAR (Sticky Header) ========== -->
+  <header id="stats-bar">
+    <div class="stats-container">
+      <!-- Money -->
+      <div class="stat-money" title="Tu saldo de dinero actual">
+        <span class="emoji">💰</span>
+        <span class="amount" id="stat-soles">S/ 0</span>
+      </div>
+
+      <!-- Habilidades -->
+      <div class="stat-bar-group">
+        <div class="stat-bar-label">
+          <span>🎓 Habilidades</span>
+          <span class="value" id="stat-skill-text">0</span>
+        </div>
+        <div class="stat-bar-track">
+          <div class="stat-bar-fill skill" id="stat-skill-bar" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Bienestar -->
+      <div class="stat-bar-group">
+        <div class="stat-bar-label">
+          <span>❤️ Bienestar</span>
+          <span class="value" id="stat-health-text">50</span>
+        </div>
+        <div class="stat-bar-track">
+          <div class="stat-bar-fill health" id="stat-health-bar" style="width: 50%"></div>
+        </div>
+      </div>
+
+      <!-- Riesgo Crediticio -->
+      <div class="stat-bar-group">
+        <div class="stat-bar-label">
+          <span>💳 Reputación</span>
+          <span class="value" id="stat-credit-text">50</span>
+        </div>
+        <div class="stat-bar-track">
+          <div class="stat-bar-fill credit" id="stat-credit-bar" style="width: 50%"></div>
+        </div>
+      </div>
+
+      <!-- Badges -->
+      <div class="stat-badges">
+        <div class="badge inactive" id="badge-savings" title="Fondo de Emergencia">
+          <span>🛡️</span> Ahorro Emerg.
+        </div>
+        <div class="badge inactive" id="badge-insurance" title="Seguro Médico">
+          <span>🏥</span> Seguro
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== GAME CONTAINER ========== -->
+  <main id="game-container"></main>
+
+  <!-- ========== MODAL OVERLAY ========== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content" id="modal-content"></div>
+  </div>
+
+  <!-- ========== STAGE TRANSITION ========== -->
+  <div class="stage-transition" id="stage-transition">
+    <span class="transition-icon" id="transition-icon">🎓</span>
+    <span class="transition-text" id="transition-text">Siguiente Etapa...</span>
+  </div>
+
+  <!-- ========== RESULTS SCREEN ========== -->
+  <div id="results-screen">
+    <div class="results-wrapper" id="results-wrapper"></div>
+  </div>
+
+  <!-- ========== CONFETTI CONTAINER ========== -->
+  <div class="confetti-container" id="confetti-container"></div>
+
+  <script src="game.js"></script>
+</body>
+</html>
